@@ -1,0 +1,53 @@
+{
+  "project": "FeatherShowcase",
+  "headers": {
+    "java": [
+      "/**",
+      " * ------------------------------------------------------------------------- *",
+      " *",
+      " * @file $FILE_NAME",
+      " * @version 0.1",
+      " * @description @TODO: add description",
+      " */",
+      ""
+    ],
+    "java-test": [
+      "/**",
+      " * ------------------------------------------------------------------------- *",
+      " *",
+      " * @file $FILE_NAME",
+      " * @version 0.1",
+      " * @test_unit $NON_TEST_BASE_FILE_NAME#version",
+      " * @description Unit tests for $NON_TEST_BASE_FILE_NAME",
+      " */",
+      ""
+    ]
+  },
+  "commands": {
+    "configure": {
+      "clean": ["mvn", "eclipse:clean", "-f", "pom.xml", "-Dstyle.color=always"],
+      "eclipse": ["mvn", "eclipse:eclipse", "-f", "pom.xml", "-Dstyle.color=always"]
+    },
+    "install": ["mvn", "clean", "package", "shade:shade", "-Dmaven.test.skip=true", "-Dstyle.color=always"],
+    "install-verbose": [
+      "mvn",
+      "clean",
+      "package",
+      "shade:shade",
+      "-X",
+      "-Dmaven.test.skip=true",
+      "-Dstyle.color=always"
+    ],
+    "coverage": ["mvn", "clean", "jacoco:prepare-agent", "install", "jacoco:report", "-Dstyle.color=always"],
+    "test": {
+      "all": ["mvn", "test", "-Dstyle.color=always"],
+      "package": ["mvn", "-Dtest=$TEST_NAME", "test", "-Dstyle.color=always"]
+    },
+    "run": {
+      "pre": [],
+      "post": []
+    }
+  },
+  "coverage-resources-path": [],
+  "clean-paths": ["target/.*FeatherShowcase.*", "dev/server/plugins/FeatherShowcase.*"]
+}
