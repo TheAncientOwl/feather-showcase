@@ -16,3 +16,5 @@ commands:
     description: Reload configurations
     usage: /feather-reload {MODULE}
     aliases: [fcreload]
+
+  teleport:

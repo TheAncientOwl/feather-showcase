@@ -23,3 +23,10 @@ configuration:
   reload:
     single: '&8[&6Feather&eCore&8] &aConfiguration reloaded&8!'
     multiple: '&8[&6Feather&eCore&8] &aConfigurations reloaded&8!'
+
+teleport:
+  start-teleporting: '&bStarting teleport process&8, &cdo not move 3 seconds&8!'
+  teleport-cancelled: '&cYou moved... the teleport process was cancelled...'
+  executed: "&dWhoosh&8! &dNow you're at {x}::{y}::{z}::{world}&8!"
+  invalid-number: '&c{string} is not a valid number&8...'
+  invalid-world: '&c{string} is not a valid world&8...'

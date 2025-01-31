@@ -32,3 +32,15 @@ modules:
     commands:
       feather-reload: dev.defaultybuf.feather.toolkit.core.modules.reload.commands.ReloadCommand
     listeners: []
+
+  TeleportModule:
+    class: dev.theancientowl.feathershowcase.modules.teleport.components.TeleportModule
+    interfaces:
+      - dev.theancientowl.feathershowcase.modules.teleport.interfaces.ITeleport
+    dependencies: [LanguageManager]
+    mandatory: true
+    config: modules/teleport.yml
+    commands:
+      teleport: dev.theancientowl.feathershowcase.modules.teleport.commands.StartTeleportCommand
+    listeners:
+      - dev.theancientowl.feathershowcase.modules.teleport.listeners.PlayerCancelTpOnMoveListener
