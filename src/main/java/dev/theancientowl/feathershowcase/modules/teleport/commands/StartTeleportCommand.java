@@ -53,7 +53,7 @@ public class StartTeleportCommand extends FeatherCommand<StartTeleportCommand.Co
     @Override
     protected void execute(CommandSender sender, CommandData data) {
         // To access any other module, getInterface(Class) can be used.
-        // Here TeleportModule was refistered as ITeleport,
+        // Here TeleportModule was registered as ITeleport,
         // hence we're using it this way to access module API:
         getInterface(ITeleport.class).startTeleport(data.player, data.x, data.y, data.z, data.world);
     }

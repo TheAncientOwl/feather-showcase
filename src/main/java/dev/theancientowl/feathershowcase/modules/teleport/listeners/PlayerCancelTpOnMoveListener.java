@@ -27,7 +27,7 @@ public class PlayerCancelTpOnMoveListener extends FeatherListener {
         }
 
         // To access any other module, getInterface(Class) can be used.
-        // Here TeleportModule was refistered as ITeleport,
+        // Here TeleportModule was registered as ITeleport,
         // hence we're using it this way to access module API:
         getInterface(ITeleport.class).cancelTeleport(event.getPlayer());
     }
