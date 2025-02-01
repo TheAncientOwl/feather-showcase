@@ -60,6 +60,8 @@ public class StartTeleportCommand extends FeatherCommand<StartTeleportCommand.Co
 
     /**
      * @brief Parse command args from "/teleport x y z world"
+     * @note For simplicity we're gonna assume that the player is alywas sending the
+     *       correct number of arguments. In practice we should check it :)
      * @param sender Who issued the command: console / player
      * @param args   command args
      * @return parsed command data if parsing was succesful, null otherwise
