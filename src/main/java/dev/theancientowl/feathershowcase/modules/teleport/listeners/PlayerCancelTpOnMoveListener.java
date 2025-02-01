@@ -7,7 +7,7 @@ import dev.defaultybuf.feather.toolkit.api.FeatherListener;
 import dev.theancientowl.feathershowcase.modules.teleport.interfaces.ITeleport;
 
 /**
- * @brief Command responsible for canceling teleports if the player moves.
+ * @brief Listener responsible for canceling teleports if the player moves.
  * @extends FeatherListener in order to be managed by the toolkit
  */
 public class PlayerCancelTpOnMoveListener extends FeatherListener {

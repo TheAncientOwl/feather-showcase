@@ -44,3 +44,14 @@ modules:
       teleport: dev.theancientowl.feathershowcase.modules.teleport.commands.StartTeleportCommand
     listeners:
       - dev.theancientowl.feathershowcase.modules.teleport.listeners.PlayerCancelTpOnMoveListener
+
+  DummyModule:
+    class: dev.theancientowl.feathershowcase.modules.dummy.components.DummyModule
+    interfaces:
+      - dev.theancientowl.feathershowcase.modules.dummy.interfaces.IDummy
+    dependencies: [TeleportModule]
+    mandatory: true
+    config: null
+    commands: []
+    listeners:
+      - dev.theancientowl.feathershowcase.modules.dummy.listeners.PlayerRightClickRedWoolListener
