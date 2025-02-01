@@ -1,3 +1,15 @@
+/**
+ * ------------------------------------------------------------------------------ *
+ *                     Copyright (c) by FeatherShowcase 2025                      *
+ * ------------------------------------------------------------------------------ *
+ * @license https://github.com/TheAncientOwl/feather-showcase/blob/main/LICENSE
+ *
+ * @file Message.java
+ * @author Alexandru Delegeanu
+ * @version 0.1
+ * @description Message keys
+ */
+
 package dev.theancientowl.feathershowcase.common;
 
 public final class Message extends dev.defaultybuf.feather.toolkit.core.Message {

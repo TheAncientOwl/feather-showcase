@@ -1,3 +1,15 @@
+/**
+ * ------------------------------------------------------------------------------ *
+ *                     Copyright (c) by FeatherShowcase 2025                      *
+ * ------------------------------------------------------------------------------ *
+ * @license https://github.com/TheAncientOwl/feather-showcase/blob/main/LICENSE
+ *
+ * @file PlayerRightClickRedWoolListener.java
+ * @author Alexandru Delegeanu
+ * @version 0.1
+ * @description Listener responsible for canceling teleports if the player right clicks a red wool block :)
+ */
+
 package dev.theancientowl.feathershowcase.modules.dummy.listeners;
 
 import org.bukkit.Material;

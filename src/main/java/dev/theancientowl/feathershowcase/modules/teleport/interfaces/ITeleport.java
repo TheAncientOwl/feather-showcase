@@ -1,3 +1,15 @@
+/**
+ * ------------------------------------------------------------------------------ *
+ *                     Copyright (c) by FeatherShowcase 2025                      *
+ * ------------------------------------------------------------------------------ *
+ * @license https://github.com/TheAncientOwl/feather-showcase/blob/main/LICENSE
+ *
+ * @file ITeleport.java
+ * @author Alexandru Delegeanu
+ * @version 0.1
+ * @description TeleportModule interface
+ */
+
 package dev.theancientowl.feathershowcase.modules.teleport.interfaces;
 
 import org.bukkit.World;

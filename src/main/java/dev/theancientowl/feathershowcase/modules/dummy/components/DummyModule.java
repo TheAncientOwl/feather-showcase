@@ -1,3 +1,15 @@
+/**
+ * ------------------------------------------------------------------------------ *
+ *                     Copyright (c) by FeatherShowcase 2025                      *
+ * ------------------------------------------------------------------------------ *
+ * @license https://github.com/TheAncientOwl/feather-showcase/blob/main/LICENSE
+ *
+ * @file DummyModule.java
+ * @author Alexandru Delegeanu
+ * @version 0.1
+ * @description Module responsible for issuing teleports when the player right clicks a red wool block :)
+ */
+
 package dev.theancientowl.feathershowcase.modules.dummy.components;
 
 import dev.defaultybuf.feather.toolkit.api.FeatherModule;

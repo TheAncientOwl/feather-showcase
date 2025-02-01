@@ -1,3 +1,15 @@
+/**
+ * ------------------------------------------------------------------------------ *
+ *                     Copyright (c) by FeatherShowcase 2025                      *
+ * ------------------------------------------------------------------------------ *
+ * @license https://github.com/TheAncientOwl/feather-showcase/blob/main/LICENSE
+ *
+ * @file StartTeleportCommand.java
+ * @author Alexandru Delegeanu
+ * @version 0.1
+ * @description Command responsible for creating teleport module data
+ */
+
 package dev.theancientowl.feathershowcase.modules.teleport.commands;
 
 import java.util.ArrayList;
