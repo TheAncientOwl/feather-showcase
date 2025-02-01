@@ -17,6 +17,11 @@ import dev.defaultybuf.feather.toolkit.util.java.Clock;
 import dev.defaultybuf.feather.toolkit.util.java.Pair;
 import dev.theancientowl.feathershowcase.modules.teleport.interfaces.ITeleport;
 
+/**
+ * @brief Module responsible for managing teleports on the server
+ * @extends FeatherModule - in order to be managed by the toolkit
+ * @implements ITeleport - module interface
+ */
 public class TeleportModule extends FeatherModule implements ITeleport {
 
     public static final record TeleportData(Player player, Location location, long issuedTime) {
@@ -26,15 +31,31 @@ public class TeleportModule extends FeatherModule implements ITeleport {
 
     public TeleportModule(InitData data) {
         super(data);
-        teleports = new HashMap<>();
     }
 
+    /**
+     * @brief Method that will be run when the plugin is enabled.
+     *        Useful for setting up internal data, running tasks, connecting to
+     *        databases, etc.
+     */
     @Override
     protected void onModuleEnable() throws FeatherSetupException {
+        teleports = new HashMap<>();
+
+        // Run a task every config:wait-time ticks to check if any teleport can be
+        // executed
         Bukkit.getScheduler().runTaskTimerAsynchronously(getPlugin(), new TeleportChecker(this), 0,
                 getConfig().getTicks("wait-time"));
     }
 
+    /**
+     * @brief Add teleport data into internal data structure
+     * @param player
+     * @param x
+     * @param y
+     * @param z
+     * @param world
+     */
     @Override
     public void startTeleport(Player player, double x, double y, double z, World world) {
         this.teleports.put(player.getUniqueId(),
@@ -42,6 +63,10 @@ public class TeleportModule extends FeatherModule implements ITeleport {
         getLanguage().message(player, "teleport.start-teleporting");
     }
 
+    /**
+     * @brief Remove player's teleport data from internal data structure
+     * @param player
+     */
     @Override
     public void cancelTeleport(Player player) {
         if (this.teleports.containsKey(player.getUniqueId())) {
@@ -50,6 +75,10 @@ public class TeleportModule extends FeatherModule implements ITeleport {
         }
     }
 
+    /**
+     * @brief Teleport the player and send him a message with the coordinates.
+     * @param data Teleport data to execute
+     */
     private void executeTeleport(TeleportData data) {
         data.player.teleport(data.location);
 
@@ -60,6 +89,10 @@ public class TeleportModule extends FeatherModule implements ITeleport {
                 Pair.of(Placeholder.WORLD, data.location.getWorld().getName())));
     }
 
+    /**
+     * @brief Task to be run every config:wait-time ticks in order to execute
+     *        teleports.
+     */
     private static class TeleportChecker implements Runnable {
         private final TeleportModule teleportModule;
 
@@ -67,6 +100,10 @@ public class TeleportModule extends FeatherModule implements ITeleport {
             this.teleportModule = teleportModule;
         }
 
+        /**
+         * @brief Iterate over module teleports and
+         *        execute those that were issued config:wait-time milliseconds ago.
+         */
         @Override
         public void run() {
             final var currentTime = Clock.currentTimeMillis();
