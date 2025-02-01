@@ -78,7 +78,7 @@ $ quill -t
 
 ## 📜 License
 
-This project is licensed under the **FeatherCore License**. See [LICENSE](https://github.com/TheAncientOwl/feather-showcase/blob/main/LICENSE) for details.
+This project is licensed under the **MIT License**. See [LICENSE](https://github.com/TheAncientOwl/feather-showcase/blob/main/LICENSE) for details.
 
 ## 🔗 Related Projects
 
